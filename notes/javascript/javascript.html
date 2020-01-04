@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Rambla|Roboto+Mono&display=swap" rel="stylesheet">     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
+    <title>Javascript Notes</title>
+</head>
+<body>
+    <h1>Basics</h1>
+    <p><strong>Comments</strong></p>
+    <code>
+        // this is an in-line comment
+    </code>
+    <code>
+        /* while this is a multi-line */
+    </code>
+    <hr />
+    <h1>Array</h1>
+    <p>Play with this in console</p>
+    <p><strong>Creating Array</strong></p>
+    <code>let arraySample = ['item1', 'item2', 'item3'];</code>
+    <p>You can now call in the array by calling the array's variable.</p>
+    
+    <p><strong>Printing the array to the screen (console)</strong></p>
+    <code>
+        console.log(arraySample); // ['item1', 'item2', 'item3']
+    </code>
+    <p>quotes = console prints text wrapped in quotes <br />
+    no quotes = calling variable name</p>
+    <p><strong>Adding to an array</strong></p>
+    <p>Think of it as pushing an item into an array. Use the method called <code>push</code> and javascript will return the number of items in the new array.</p>
+    <code>arraySample.push('item4') // 4</code>
+    <p><strong>Changing an item in an array</strong></p>
+    <ol>
+        <li>First bracket is the placement of item in array. You get the print out of a specific item by using <code>arraySample[0] // "item 1"</code></li>
+        <li>Set new string to placement where you want to update</li>
+        <li>If you don't have an item, you'll get <code>undefined</code> </li>
+    </ol>
+    <code>arraySample[0] = 'new item1' // "new item1"</code>
+    <p><strong>Delete an item in an array</strong></p>
+    <p>Use a method called <code>splice</code> where the first item is where to start and the next number how many to delete </p>
+    <code>arraySample.splice(0,1) // ["new item1"]</code>
+    <p>The array should only show <code>[ "item2", "item3" ]</code> when you call it now</p>
+    <code>arraySample.splice(1,1) // ["item3"]</code>
+    <p>The array should only show <code>["item2"]</code> now because item in position 1 was deleted.</p>
+    <p>If you use splice on an item that doesn't exist, it will return an empty array to show you that it can't find an item in that position so nothing happened.</p>
+</body>
+</html>
