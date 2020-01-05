@@ -1,5 +1,13 @@
 * {
     font-family: 'Rambla', sans-serif;
+    font-size: 100%;
+    color: #2f435f;
+    background-color: #f6fff9;
+}
+body {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 code{
@@ -22,4 +30,22 @@ pre{
     color:#15141f;
     background-color:#dfe0e0;
     font-size: .9rem;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+li{
+    line-height: 1.5;
+}
+.content-section{
+    padding: 15px 20px;
+}
+.content-section__title{
+    font-size: 18px;
 }
