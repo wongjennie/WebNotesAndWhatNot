@@ -12,7 +12,7 @@
 
 <body>
     <h1>Javascript Jibber Jabber</h1>
-    <p>You can run these codes in the console. This is the bare basics of how to create a "To Do List" in Javascript.
+    <p>You can run these codes in the console. This will give you enough basics to create a "To Do List" in Javascript.
     </p>
     <div class="content-section">
         <h2 id="basics">Basics</h2>
@@ -24,7 +24,25 @@
         <code>
             /* while this is a multi-line */
         </code>
-        
+        <p class="content-section__title"><strong>For Loop</strong></p>
+        <p>There are different for loop you should be familar with.</p>
+        <p><code>const array1 = ['a', 'b', 'c']</code></p>
+        <p>1. For Loop</p>
+        <p><code>for (let i = 0; i < array1.length; i++) { console.log(array1[i]); }</code></p>
+        <p>2. For..of Loop for Arrays</p>
+        <p><pre>
+            for (const i of testArray) {
+             console.log(i); 
+            }</pre></p>
+        <p>3. For..in for Objects</p>
+        <p><pre>
+            const object = {a: 1, b: 2, c: 3};
+
+            for (const property in object) {
+            console.log(`${property}: ${object[property]}`);
+            }
+
+        </pre></p>
     </div>
     <div class="content-section">
     <h2 id="array">Array</h2>
@@ -101,6 +119,110 @@
     </div>
     <div class="content-section">
         <h2 id="object">Object</h2>
+        <p>Basic example of an object. Each key inside an object is paired with a value, object, array, or function.</p>
+        <pre>
+            let videogames = {
+                switch: 'Animal Crossing: New Horizon',
+                ps4: 'Persona 5',
+                pc: 'League of Legends',
+                currentlyPlaying: function() {
+                    console.log(this.ps4);
+                },
+                console: ['switch', 'pc', 'xbox', 'ps4']
+            }
+        </pre>
+        <p>You can now call value of the object by using <code>videogames.switch // "Animal Crossing: New Horizon"</code>. To call the function inside the object: <code>videogames.currentlyPlaying()</code>. The <code>this</code> keyword refers to the object itself. You do not have to give a name to the function inside the object.</p>
+        <p class="content-section__title"><strong>Having a To Do List object</strong></p>
+        <pre>
+            let todoList = {
+                todos: ['item1', 'item2', 'item3'],
+                displayTodos: function() {
+                    console.log(this.todos);
+                },
+                addTodo: function(todoValue) {
+                    this.todos.push(todoValue);
+                    this.displayTodos();
+                },
+                changeTodo: function(position, todoValue) {
+                    this.todos[position] = todoValue;
+                    this.displayTodos();
+                },
+                deleteTodo: function(position) {
+                    this.todos.splice(position, 1);
+                    this.displayTodos();
+                }
+            }
+        </pre>
+        <p><strong>What if our object contains objects?</strong></p>
+        <p>We'll have an empty array that will contain objects. </p>
+        <pre>
+            let todoList = {
+                todos: [],
+                displayTodos: function() {
+                    //check if todos is empty or not
+                    if (this.todos.length === 0) {
+                        console.log("List is empty.");
+                    }
+                    else {
+                        // for loop to display text out in console
+                        console.log('Todo List:');
+                        for (let i = 0; i < this.todos.length; i++) {
+                            if (this.todos[i].completed === true) {
+                                console.log('[X]', this.todos[i].todoText);
+                            } else {
+                                console.log('[ ]', this.todos[i].todoText);
+                            }
+                        }
+                    }
+                },
+                addTodo: function(todoValue) {
+                    // adding to empty object
+                    this.todos.push({
+                        todoText: todoValue,
+                        completed: false
+                    });
+                    this.displayTodos();
+                },
+                changeTodo: function(position, todoValue) {
+                    // todoList is an object so we use the dot notation
+                    this.todos[position].todoText = todoValue;
+                    this.displayTodos();
+                },
+                deleteTodo: function(position) {
+                    this.todos.splice(position, 1);
+                    this.displayTodos();
+                },
+                toggleComplete: function(position) {
+                    // this function is to update boolean for completed
+                    // this.todos[position].completed = !this.todos[position].completed;
+                    let todo = this.todos[position];
+                    todo.completed = !todo.completed;
+                    this.displayTodos();
+                },
+                toggleAll: function() {
+                    let totalTodos = this.todos.length;
+                    let completedTodos = 0;
+                    
+                    //Numbers of completed todos
+                    for (let i = 0; i < totalTodos; i++) {
+                        if (this.todos[i].completed === true) {
+                            completedTodos++;
+                        }
+                    }
+
+                    if (completedTodos === totalTodos) {
+                        for (let i = 0; i < totalTodos; i++) {
+                            this.todos[i].completed = false;
+                        }
+                    } else {
+                        for (let i = 0; i < totalTodos; i++) {
+                            this.todos[i].completed = true;
+                        }
+                    }
+                    this.displayTodos();
+                }
+            }
+        </pre>
     </div>
 </body>
 
