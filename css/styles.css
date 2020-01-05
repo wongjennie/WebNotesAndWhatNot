@@ -2,7 +2,7 @@
     font-family: 'Rambla', sans-serif;
 }
 
-code {
+code{
     font-family: 'Roboto Mono', monospace;
     padding: 0 .25rem;
     margin: 0 .0625rem;
@@ -11,5 +11,15 @@ code {
     background-color:#dfe0e0;
     white-space: normal;
     vertical-align: initial;
+    font-size: .9rem;
+}
+
+pre{
+    font-family: 'Roboto Mono', monospace;
+    padding: 0 .25rem;
+    margin: 0 .0625rem;
+    border-radius: .125rem;
+    color:#15141f;
+    background-color:#dfe0e0;
     font-size: .9rem;
 }

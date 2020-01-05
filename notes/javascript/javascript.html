@@ -8,7 +8,9 @@
     <title>Javascript Notes</title>
 </head>
 <body>
-    <h1>Basics</h1>
+    <h1>Javascript Jibber Jabber</h1>
+    <p>You can run these code in console. This is the bare basic on how to create a "To Do List" in Javascript.</p>
+    <h2 id="basics">Basics</h2>
     <p><strong>Comments</strong></p>
     <code>
         // this is an in-line comment
@@ -17,8 +19,7 @@
         /* while this is a multi-line */
     </code>
     <hr />
-    <h1>Array</h1>
-    <p>Play with this in console</p>
+    <h2 id="array">Array</h2>
     <p><strong>Creating Array</strong></p>
     <code>let arraySample = ['item1', 'item2', 'item3'];</code>
     <p>You can now call in the array by calling the array's variable.</p>
@@ -46,5 +47,40 @@
     <code>arraySample.splice(1,1) // ["item3"]</code>
     <p>The array should only show <code>["item2"]</code> now because item in position 1 was deleted.</p>
     <p>If you use splice on an item that doesn't exist, it will return an empty array to show you that it can't find an item in that position so nothing happened.</p>
+    <hr />
+    <h2 id="function">Functions</h2>
+    <p>Think of function as recipes with steps on what you want to do</p>
+    <code>function functionName() {}</code>
+    <p><strong>Function to add/change/delete our Array</strong></p>
+    <p>The array we'll work on: <code>let todos = ['item1', 'item2', 'item3']</code></p>
+    <p><strong>Displaying the array</strong></p>
+    <pre>
+        function displayTodos() {
+            console.log('My todos:', todos)
+        }
+    </pre>
+    <p>You can call the function by the function name. This function doesn't take variable so would just call it by <code>displayTodos();</code></p>
+    <p><strong>Function to add new item to array</strong></p>
+    <pre>
+        function addTodo(newItem) {
+            todos.push(newItem);
+            displayTodos();
+        }
+    </pre>
+    <p>This is a function with a paramemter that will take in an string of text and add it to an array.</p>
+    <p><strong>Function to change an item in array</strong></p>
+    <pre>
+        function changeTodo(position, newValue) {
+            todos[position] = newVlaue;
+            displayTodos();
+        }
+    </pre>
+    <p><strong>Function to delete an item in an array</strong></p>
+    <pre>
+        function deleteTodo(position) {
+            todos.splice(position, 1);
+            displayTodos();
+        }
+    </pre>
 </body>
 </html>
