@@ -6,8 +6,13 @@
 ### Table of Content
 <p>
 <a href="https://wongjennie.github.io/WebNotesAndWhatNot" target="_blank">Javascript Section</a>
-<a href="https://wongjennie.github.io/WebNotesAndWhatNot/notes/javascript/javascript.html">Javascript</a><br />
+<br />
 <a href="https://wongjennie.github.io/WebNotesAndWhatNot/notes/javascript/javascript.html#basic">Javascript - Basic</a><br />
 <a href="https://wongjennie.github.io/WebNotesAndWhatNot/notes/javascript/javascript.html#array">Javascript - Array</a><br />
 <a href="https://wongjennie.github.io/WebNotesAndWhatNot/notes/javascript/javascript.html#function">Javascript - Function</a><br />
 <a href="https://wongjennie.github.io/WebNotesAndWhatNot/notes/javascript/javascript.html#object">Javascript - Object</a><br /></p>
+
+### Resources
+<a href="https://eloquentjavascript.net/" target="_blank">Eloquent Javascript</a><br />
+<a href="https://watchandcode.com/" target="_blank">Watch and Code Javascript</a>
+Secrets of the Javascript Ninja
