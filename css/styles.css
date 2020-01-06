@@ -23,15 +23,39 @@ code{
 }
 
 pre{
+    clear: both;
+    background: rgba(32,28,41,.75);
+    padding: 0;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    -ms-word-break: normal;
+    word-break: normal;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    position: relative;
+    line-height: 28px;
+    border-radius: 8px;
+    min-width: 100px;
+    max-width: 100%;
+    overflow: hidden;
     font-family: 'Roboto Mono', monospace;
-    padding: 0 .25rem;
-    margin: 0 .0625rem;
-    border-radius: .125rem;
-    color:#15141f;
-    background-color:#dfe0e0;
-    font-size: .9rem;
 }
-
+pre code {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.75;
+    background: 0 0;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    overflow-x: scroll;
+    max-width: 100%;
+    min-width: 100px;
+    font-family: 'Roboto Mono', monospace;
+    padding: 0px 20px;
+}
 h1{
     font-size: 2rem;
 }
